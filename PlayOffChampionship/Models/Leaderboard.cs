@@ -2,6 +2,8 @@
 {
     public class Leaderboard
     {
+
+        public int Id { get; set; }
         public int PlayerId { get; set; }
         public int LeagueId { get; set; }
         public int TotalWins { get; set; }

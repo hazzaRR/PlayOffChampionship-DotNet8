@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("d66f8f34-b342-4dd9-b41e-c56a1896fa29")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+018d4cef848ade736ff9da034bd6a18f6c13621e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31018896f0a77155c432435a5f17874c63361dd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
