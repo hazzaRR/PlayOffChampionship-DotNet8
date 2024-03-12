@@ -14,9 +14,11 @@ namespace PlayOffChampionship.Repository
         {
             _context = context;
         }
-        public Task<League> Create(League league)
+        public async Task<League> Create(League league)
         {
-            throw new NotImplementedException();
+            _context.Leagues.Add(league);
+            await _context.SaveChangesAsync();
+            return league;
         }
 
         public Task<League?> Delete(int id)
