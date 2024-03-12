@@ -1,4 +1,4 @@
-﻿namespace PlayOffChampionship.Dtos
+﻿namespace PlayOffChampionship.Dtos.League
 {
     public class CreateLeagueDto
     {

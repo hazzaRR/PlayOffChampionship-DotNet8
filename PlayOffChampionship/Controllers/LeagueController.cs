@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlayOffChampionship.Dtos;
+using PlayOffChampionship.Dtos.League;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Mappers;
 using PlayOffChampionship.Models;
@@ -46,6 +46,19 @@ namespace PlayOffChampionship.Controllers
             if (league == null)
             {
                 return NotFound($"A league with the id: {id} does not exist");
+            }
+
+            return Ok(league);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody]  UpdateLeagueDto leagueDto)
+        {
+            var league = await _leagueRepository.Update(id, leagueDto);
+
+            if ( league == null )
+            {
+                return NotFound($"League could not be updated. No league with the id: {id} was found");
             }
 
             return Ok(league);

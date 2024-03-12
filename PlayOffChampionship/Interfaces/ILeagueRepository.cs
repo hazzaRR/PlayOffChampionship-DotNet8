@@ -1,4 +1,5 @@
-﻿using PlayOffChampionship.Models;
+﻿using PlayOffChampionship.Dtos.League;
+using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Interfaces
 {
@@ -10,7 +11,7 @@ namespace PlayOffChampionship.Interfaces
         Task<League?> GetLeagueById(int id);
 
         Task<League> Create(League league);
-        Task<League?> Update(int id, League league);
+        Task<League?> Update(int id, UpdateLeagueDto leagueDto);
 
         Task<League?> Delete(int id);
 
