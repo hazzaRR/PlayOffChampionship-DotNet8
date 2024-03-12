@@ -37,5 +37,18 @@ namespace PlayOffChampionship.Controllers
 
 
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var league = await _leagueRepository.Delete(id);
+
+            if (league == null)
+            {
+                return NotFound($"A league with the id: {id} does not exist");
+            }
+
+            return Ok(league);
+        }
     }
 }

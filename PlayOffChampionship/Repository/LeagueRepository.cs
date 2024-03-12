@@ -21,9 +21,19 @@ namespace PlayOffChampionship.Repository
             return league;
         }
 
-        public Task<League?> Delete(int id)
+        public async Task<League?> Delete(int id)
         {
-            throw new NotImplementedException();
+            League? league = await _context.Leagues.FirstOrDefaultAsync(league => league.Id == id);
+
+            if (league == null)
+            {
+                return null;
+            }
+
+            _context.Leagues.Remove(league);
+            await _context.SaveChangesAsync();
+
+            return league;
         }
 
         public async Task<List<League>> GetAllLeagues()
