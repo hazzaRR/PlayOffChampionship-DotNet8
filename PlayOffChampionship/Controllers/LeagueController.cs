@@ -16,5 +16,11 @@ namespace PlayOffChampionship.Controllers
         {
             _leagueRepository = leagueRepository;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllLeagues()
+        {
+            return Ok(await _leagueRepository.GetAllLeagues()); 
+        }
     }
 }

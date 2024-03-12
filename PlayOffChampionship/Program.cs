@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
+using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
+using PlayOffChampionship.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 var DbConnectionString = builder.Configuration["DbConnection"];
 
 // Add services to the container.
 
-
+builder.Services.AddScoped<ILeagueRepository, LeagueRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
