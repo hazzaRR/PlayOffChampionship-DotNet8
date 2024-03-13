@@ -1,6 +1,6 @@
 ﻿namespace PlayOffChampionship.Dtos.League
 {
-    public class CreateLeagueDto
+    public class LeagueDto
     {
 
         public string Name { get; set; } = string.Empty;

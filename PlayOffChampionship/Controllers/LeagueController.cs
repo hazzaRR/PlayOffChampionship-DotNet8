@@ -23,17 +23,34 @@ namespace PlayOffChampionship.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllLeagues()
         {
-            return Ok(await _leagueRepository.GetAllLeagues()); 
+
+            var leagues = await _leagueRepository.GetAllLeagues();
+            return Ok(leagues.Select(league => league.ToLeagueDtoFromLeague())); 
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+
+            var league = await _leagueRepository.GetLeagueById(id);
+
+            if (league == null) 
+            {
+                return NotFound($"A league with the id: {id} does not exist");
+            }
+
+            return Ok(league.ToLeagueDtoFromLeague());
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateLeagueDto leagueDto)
+        public async Task<IActionResult> Create([FromBody] LeagueDto leagueDto)
         {
-            League leagueModel = leagueDto.ToLeagueFromCreateDto();
+            League leagueModel = leagueDto.ToLeagueFromLeagueDto();
 
             var league = await _leagueRepository.Create(leagueModel);
 
-            return Ok(league);
+            return Ok(league.ToLeagueDtoFromLeague());
 
 
         }
@@ -48,11 +65,11 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"A league with the id: {id} does not exist");
             }
 
-            return Ok(league);
+            return Ok(league.ToLeagueDtoFromLeague());
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody]  UpdateLeagueDto leagueDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody]  LeagueDto leagueDto)
         {
             var league = await _leagueRepository.Update(id, leagueDto);
 
@@ -61,7 +78,7 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"League could not be updated. No league with the id: {id} was found");
             }
 
-            return Ok(league);
+            return Ok(league.ToLeagueDtoFromLeague());
         }
     }
 }

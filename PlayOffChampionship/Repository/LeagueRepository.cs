@@ -47,7 +47,7 @@ namespace PlayOffChampionship.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<League?> Update(int id, UpdateLeagueDto leagueDto)
+        public async Task<League?> Update(int id, LeagueDto leagueDto)
         {
             League? leagueModel = await  _context.Leagues.FirstOrDefaultAsync(league => league.Id == id);
 

@@ -11,7 +11,7 @@ namespace PlayOffChampionship.Interfaces
         Task<League?> GetLeagueById(int id);
 
         Task<League> Create(League league);
-        Task<League?> Update(int id, UpdateLeagueDto leagueDto);
+        Task<League?> Update(int id, LeagueDto leagueDto);
 
         Task<League?> Delete(int id);
 
