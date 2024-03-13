@@ -1,5 +1,9 @@
-﻿namespace PlayOffChampionship.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PlayOffChampionship.Models
 {
+
+    [Table("match")]
     public class Match
     {
         public int Id { get; set; }

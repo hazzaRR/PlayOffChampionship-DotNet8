@@ -22,7 +22,8 @@ namespace PlayOffChampionship.Mappers
             LeagueDto leagueDto = new()
             {
                 Name = league.Name,
-                Description = league.Description
+                Description = league.Description,
+                Players = league.Players
             };
 
             return leagueDto;
