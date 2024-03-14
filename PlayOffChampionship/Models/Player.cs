@@ -10,7 +10,6 @@ namespace PlayOffChampionship.Models
 
         public string? Name { get; set; }
 
-        public int? LeagueId { get; set; }
-        public League? League { get; set; }
+        public List<League> Leagues { get; set; } = new List<League>();
     }
 }
