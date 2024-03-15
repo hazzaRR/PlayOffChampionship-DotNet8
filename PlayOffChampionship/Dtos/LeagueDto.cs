@@ -1,6 +1,6 @@
 ﻿using PlayOffChampionship.Models;
 
-namespace PlayOffChampionship.Dtos.League
+namespace PlayOffChampionship.Dtos
 {
     public class LeagueDto
     {

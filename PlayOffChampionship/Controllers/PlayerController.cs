@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlayOffChampionship.Interfaces;
-using PlayOffChampionship.Dtos.Players;
 using PlayOffChampionship.Models;
 using PlayOffChampionship.Mappers;
-using Microsoft.AspNetCore.Http.HttpResults;
+using PlayOffChampionship.Dtos;
 
 namespace PlayOffChampionship.Controllers
 {

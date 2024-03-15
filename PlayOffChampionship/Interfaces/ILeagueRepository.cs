@@ -1,4 +1,4 @@
-﻿using PlayOffChampionship.Dtos.League;
+﻿using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Interfaces

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlayOffChampionship.Dtos.League;
+using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Mappers;
 using PlayOffChampionship.Models;

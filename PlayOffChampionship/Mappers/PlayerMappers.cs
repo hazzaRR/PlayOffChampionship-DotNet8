@@ -1,4 +1,4 @@
-﻿using PlayOffChampionship.Dtos.Players;
+﻿using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Mappers
