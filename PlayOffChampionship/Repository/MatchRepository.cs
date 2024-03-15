@@ -1,4 +1,5 @@
-﻿using PlayOffChampionship.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Repository
@@ -26,9 +27,21 @@ namespace PlayOffChampionship.Repository
             throw new NotImplementedException();
         }
 
-        public Task<Match?> GetById(int id)
+        public async Task<Match?> GetById(int id)
         {
-            throw new NotImplementedException();
+            var match = await _context.Matches
+                .Include(match => match.Player1)
+                .Include(match => match.Player2)
+                .Include(match => match.League)
+                .Include(match => match.Winner)
+                .FirstOrDefaultAsync(match => match.Id == id);
+
+            if (match == null)
+            {
+                return null;
+            }
+
+            return match;
         }
 
         public Task<Match?> GetByLeagueId(int leagueId)

@@ -23,6 +23,19 @@ namespace PlayOffChampionship.Controllers
             _playerRepository = playerRepository;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var match = await _matchRepository.GetById(id);
+
+            if (match == null)
+            {
+                return NotFound($"No match with the id: {id}");
+            }
+
+            return Ok(match);
+        }
+
         [HttpGet("player/{id}")]
         public async Task<IActionResult> GetByPlayerId([FromRoute] int id)
         {
