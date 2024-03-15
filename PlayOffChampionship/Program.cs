@@ -4,12 +4,23 @@ using PlayOffChampionship.Models;
 using PlayOffChampionship.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
-var DbConnectionString = builder.Configuration["DbConnection"];
+
+string? DbConnectionString;
+
+if (builder.Environment.IsDevelopment())
+{
+    DbConnectionString = builder.Configuration["DbConnectionDevelopment"];
+}
+else
+{
+    DbConnectionString = builder.Configuration["DbConnectionProduction"];
+}
 
 // Add services to the container.
 
 builder.Services.AddScoped<ILeagueRepository, LeagueRepository>();
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
+builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

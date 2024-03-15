@@ -51,7 +51,7 @@ namespace PlayOffChampionship.Controllers
 
             if (player1 == null || player2 == null || league == null || winner == null)
             {
-                return NotFound("one of the players or league supplied doesnt not exist");
+                return NotFound("one of the players or league supplied does not exist");
             }
 
             Match matchModel = createMatchDto.ToMatchFromCreateMatchDto(player1, player2, league, winner);
