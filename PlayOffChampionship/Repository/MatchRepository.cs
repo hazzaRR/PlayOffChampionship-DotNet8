@@ -44,10 +44,19 @@ namespace PlayOffChampionship.Repository
             return match;
         }
 
-        public Task<Match?> GetByLeagueId(int leagueId)
+        public async Task<List<Match>> GetByLeagueId(int leagueId)
         {
-            throw new NotImplementedException();
-        }
+                 var matches = await _context.Matches
+                .Include(match => match.Player1)
+                .Include(match => match.Player2)
+                .Include(match => match.League)
+                .Include(match => match.Winner)
+                .Where(match => match.LeagueId == leagueId)
+                .ToListAsync();
+
+
+                return matches;
+            }
 
         public Task<Match?> GetByPlayerId(int playerId)
         {

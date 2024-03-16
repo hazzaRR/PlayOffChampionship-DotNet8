@@ -7,11 +7,11 @@ namespace PlayOffChampionship.Interfaces
 
         Task<Match?> GetById(int id);
 
-        Task<Match?> GetByLeagueId(int leagueId);
+        Task<List<Match>> GetByLeagueId(int leagueId);
 
-        Task<Match?> GetByPlayerId(int playerId);
+        Task<List<Match>> GetByPlayerId(int playerId);
 
-        Task<Match?> GetByWinnerId(int winnerId);
+        Task<List<Match>> GetByWinnerId(int winnerId);
 
         Task<Match> Create(Match match);
 
