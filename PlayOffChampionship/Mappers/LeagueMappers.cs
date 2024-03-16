@@ -23,7 +23,6 @@ namespace PlayOffChampionship.Mappers
             {
                 Name = league.Name,
                 Description = league.Description,
-                Players = league.Players
             };
 
             return leagueDto;
