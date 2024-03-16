@@ -23,7 +23,10 @@ namespace PlayOffChampionship.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _playerRepository.GetAllPlayers());
+
+            var players = await _playerRepository.GetAllPlayers();
+
+            return Ok(players.Select(player => player.ToPlayerDtoFromPlayer()));
         }
 
         [HttpGet("{id}")]
@@ -36,13 +39,13 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"Player with the id: {id} does not exist");
             }
 
-            return Ok(player);
+            return Ok(player.ToPlayerDtoFromPlayer());
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] PlayerDto playerDto)
         {
-            Player player = playerDto.ToPlayerDtoFromPlayer();
+            Player player = playerDto.ToPlayerFromPlayerDto();
 
             var playerModel = await _playerRepository.Create(player);
 
