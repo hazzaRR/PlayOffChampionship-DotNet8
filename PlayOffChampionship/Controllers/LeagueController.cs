@@ -73,12 +73,15 @@ namespace PlayOffChampionship.Controllers
         {
             var league = await _leagueRepository.Update(id, leagueDto);
 
-            if ( league == null )
+            if ( league == null)
             {
                 return NotFound($"League could not be updated. No league with the id: {id} was found");
             }
 
             return Ok(league.ToLeagueDtoFromLeague());
         }
+
+
+
     }
 }

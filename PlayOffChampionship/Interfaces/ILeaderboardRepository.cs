@@ -8,10 +8,10 @@ namespace PlayOffChampionship.Interfaces
        Task<List<Leaderboard>> GetByLeagueId(int leagueId);
 
 
-        Task<Leaderboard?> GetLeaderboardByLeagueIdAndPlayerId(int leagueId, int  playerId);
+        Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int  playerId);
 
-        Task<Leaderboard> CreateLeaderboard(Leaderboard leaderboard);
+        Task<Leaderboard> Create(Leaderboard leaderboard);
 
-        Task<Leaderboard> UpdateLeaderboard(Leaderboard leaderboard);
+        Task<Leaderboard> Update(Leaderboard leaderboard);
     }
 }
