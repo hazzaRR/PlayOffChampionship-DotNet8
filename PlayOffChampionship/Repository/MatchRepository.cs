@@ -58,12 +58,12 @@ namespace PlayOffChampionship.Repository
                 return matches;
             }
 
-        public Task<Match?> GetByPlayerId(int playerId)
+        public Task<List<Match>> GetByPlayerId(int playerId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Match?> GetByWinnerId(int winnerId)
+        public Task<List<Match>> GetByWinnerId(int winnerId)
         {
             throw new NotImplementedException();
         }

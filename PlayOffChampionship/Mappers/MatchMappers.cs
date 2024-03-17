@@ -23,5 +23,25 @@ namespace PlayOffChampionship.Mappers
             return match;
 
         }
+
+        public static MatchDto ToMatchDtoFromCreateMatchDto(this Match match)
+        {
+            MatchDto matchDto = new()
+            {
+                MatchDate = match.MatchDate,
+                Player1 = match.Player1.ToPlayerDtoFromPlayer(),
+                Player2 = match.Player2.ToPlayerDtoFromPlayer(),
+                Player1Score = match.Player1Score,
+                Player2Score = match.Player2Score,
+                League = match.League.ToLeagueDtoFromLeague(),
+                Winner = match.Winner.ToPlayerDtoFromPlayer(),
+                LeagueId = match.LeagueId,
+                Player1Id = match.Player1Id,
+                Player2Id = match.Player2Id,
+                WinnerId = match.WinnerId
+            };
+
+            return matchDto;
+        }
     }
 }

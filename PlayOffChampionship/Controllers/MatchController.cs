@@ -33,7 +33,7 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"No match with the id: {id}");
             }
 
-            return Ok(match);
+            return Ok(match.ToMatchDtoFromCreateMatchDto());
         }
 
         [HttpGet("player/{id}")]
