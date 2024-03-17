@@ -7,7 +7,7 @@ using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/league")]
     [ApiController]
     public class LeagueController : ControllerBase
     {

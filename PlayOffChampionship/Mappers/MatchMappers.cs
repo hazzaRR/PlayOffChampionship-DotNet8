@@ -24,7 +24,7 @@ namespace PlayOffChampionship.Mappers
 
         }
 
-        public static MatchDto ToMatchDtoFromCreateMatchDto(this Match match)
+        public static MatchDto ToMatchDtoFromMatch(this Match match)
         {
             MatchDto matchDto = new()
             {

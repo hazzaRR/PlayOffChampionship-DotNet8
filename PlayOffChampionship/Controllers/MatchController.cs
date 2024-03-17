@@ -7,7 +7,7 @@ using PlayOffChampionship.Mappers;
 
 namespace PlayOffChampionship.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/match")]
     [ApiController]
     public class MatchController : ControllerBase
     {
@@ -33,7 +33,7 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"No match with the id: {id}");
             }
 
-            return Ok(match.ToMatchDtoFromCreateMatchDto());
+            return Ok(match.ToMatchDtoFromMatch());
         }
 
         [HttpGet("player/{id}")]
@@ -41,7 +41,7 @@ namespace PlayOffChampionship.Controllers
         {
             var matches = await _matchRepository.GetByPlayerId(id);
 
-            return Ok(matches);
+            return Ok(matches.Select(match => match.ToMatchDtoFromMatch()));
         }
 
 
@@ -50,7 +50,7 @@ namespace PlayOffChampionship.Controllers
         {
             var matches = await _matchRepository.GetByLeagueId(id);
 
-            return Ok(matches);
+            return Ok(matches.Select(match => match.ToMatchDtoFromMatch()));
         }
 
         [HttpPost]

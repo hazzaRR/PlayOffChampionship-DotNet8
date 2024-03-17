@@ -22,9 +22,19 @@ namespace PlayOffChampionship.Repository
 
         }
 
-        public Task<Match?> Delete(int id)
+        public async Task<Match?> Delete(int id)
         {
-            throw new NotImplementedException();
+            Match? match = await _context.Matches.FirstOrDefaultAsync(match => match.Id == id);
+
+            if (match == null)
+            {
+                return null;
+            }
+
+            _context.Matches.Remove(match);
+            await _context.SaveChangesAsync();
+
+            return match;
         }
 
         public async Task<Match?> GetById(int id)
@@ -58,14 +68,32 @@ namespace PlayOffChampionship.Repository
                 return matches;
             }
 
-        public Task<List<Match>> GetByPlayerId(int playerId)
+        public async Task<List<Match>> GetByPlayerId(int playerId)
         {
-            throw new NotImplementedException();
+            var matches = await _context.Matches
+            .Include(match => match.Player1)
+            .Include(match => match.Player2)
+            .Include(match => match.League)
+            .Include(match => match.Winner)
+            .Where(match => match.Player1Id == playerId || match.Player2Id == playerId)
+            .ToListAsync();
+
+
+            return matches;
         }
 
-        public Task<List<Match>> GetByWinnerId(int winnerId)
+        public async Task<List<Match>> GetByWinnerId(int winnerId)
         {
-            throw new NotImplementedException();
+            var matches = await _context.Matches
+            .Include(match => match.Player1)
+            .Include(match => match.Player2)
+            .Include(match => match.League)
+            .Include(match => match.Winner)
+            .Where(match => match.WinnerId == winnerId)
+            .ToListAsync();
+
+
+            return matches;
         }
 
         public Task<Match?> Update(int id, Match match)

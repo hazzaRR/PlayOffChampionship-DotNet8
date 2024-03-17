@@ -7,7 +7,7 @@ using PlayOffChampionship.Dtos;
 
 namespace PlayOffChampionship.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/player")]
     [ApiController]
     public class PlayerController : ControllerBase
     {

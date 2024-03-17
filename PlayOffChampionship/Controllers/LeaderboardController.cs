@@ -4,7 +4,7 @@ using PlayOffChampionship.Interfaces;
 
 namespace PlayOffChampionship.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/leaderboard")]
     [ApiController]
     public class LeaderboardController : ControllerBase
     {
