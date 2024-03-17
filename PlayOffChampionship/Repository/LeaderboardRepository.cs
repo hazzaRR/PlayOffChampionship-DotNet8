@@ -13,11 +13,27 @@ namespace PlayOffChampionship.Repository
         {
             _context = context;
         }
+
+        public Task<Leaderboard> CreateLeaderboard(Leaderboard leaderboard)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<Leaderboard>> GetByLeagueId(int leagueId)
         {
             var leaderboard = await _context.Leaderboard.Where(row => row.LeagueId == leagueId).OrderBy(row => row.TotalWins).ToListAsync();
 
             return leaderboard;
+        }
+
+        public Task<Leaderboard?> GetLeaderboardByLeagueIdAndPlayerId(int leagueId, int playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Leaderboard> UpdateLeaderboard(Leaderboard leaderboard)
+        {
+            throw new NotImplementedException();
         }
     }
 }
