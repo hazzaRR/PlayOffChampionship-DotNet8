@@ -14,7 +14,7 @@ namespace PlayOffChampionship.Repository
             _context = context;
         }
 
-        public Task<Leaderboard> CreateLeaderboard(Leaderboard leaderboard)
+        public Task<Leaderboard> Create(Leaderboard leaderboard)
         {
             throw new NotImplementedException();
         }
@@ -26,7 +26,12 @@ namespace PlayOffChampionship.Repository
             return leaderboard;
         }
 
-        public Task<Leaderboard?> GetLeaderboardByLeagueIdAndPlayerId(int leagueId, int playerId)
+        public Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Leaderboard> Update(Leaderboard leaderboard)
         {
             throw new NotImplementedException();
         }

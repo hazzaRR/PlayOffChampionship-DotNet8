@@ -13,9 +13,14 @@ namespace PlayOffChampionship.Repository
         {
             _context = context;
         }
-        public Task<PlayerLeague> Create(Player player, League league)
+        public async Task<PlayerLeague> Create(PlayerLeague playerLeague)
         {
-            throw new NotImplementedException();
+
+            _context.PlayerLeagues.Add(playerLeague);
+            await _context.SaveChangesAsync();
+
+            return playerLeague;
+
         }
     }
 }
