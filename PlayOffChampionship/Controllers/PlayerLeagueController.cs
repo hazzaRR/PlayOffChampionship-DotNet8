@@ -13,12 +13,14 @@ namespace PlayOffChampionship.Controllers
         private readonly IPlayerLeagueRepository _playerLeagueRepository;
         private readonly ILeagueRepository _leagueRepository;
         private readonly IPlayerRepository _playerRepository;
+        private readonly ILeaderboardRepository _leaderboardRepository;
 
-        public PlayerLeagueController(IPlayerLeagueRepository playerLeagueRepository, ILeagueRepository leagueRepository, IPlayerRepository playerRepository)
+        public PlayerLeagueController(IPlayerLeagueRepository playerLeagueRepository, ILeagueRepository leagueRepository, IPlayerRepository playerRepository, ILeaderboardRepository leaderboardRepository)
         {
             _playerLeagueRepository = playerLeagueRepository;
             _leagueRepository = leagueRepository;
             _playerRepository = playerRepository;
+            _leaderboardRepository = leaderboardRepository;
         }
 
         [HttpPost("join/{id}/player/{playerId}")]
@@ -37,13 +39,26 @@ namespace PlayOffChampionship.Controllers
                 return NotFound($"A player with the id {id} does not exist");
             }
 
-            PlayerLeague playerLeague = new()
+            PlayerLeague playerLeague = new ()
             {
                 Player = player,
                 League = league
             };
-
+            
+            //create record of player and leauge so that a player has offically joined a league
             await _playerLeagueRepository.Create(playerLeague);
+
+            //create player's record of leaderboard in the given league
+
+            Leaderboard leaderboard = new ()
+            {
+                League = league,
+                Player = player,
+                TotalMatches = 0,
+                TotalWins = 0
+            };
+
+            await _leaderboardRepository.Create(leaderboard);
 
             return Created();
         }

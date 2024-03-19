@@ -21,6 +21,8 @@ else
 builder.Services.AddScoped<ILeagueRepository, LeagueRepository>();
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 builder.Services.AddScoped<IMatchRepository, MatchRepository>();
+builder.Services.AddScoped<IPlayerLeagueRepository, PlayerLeagueRepository>();
+builder.Services.AddScoped<ILeaderboardRepository, LeaderboardRepository>();
 
 builder.Services.AddHealthChecks();
 
