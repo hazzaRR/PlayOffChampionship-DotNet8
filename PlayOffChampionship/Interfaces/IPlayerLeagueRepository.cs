@@ -6,5 +6,6 @@ namespace PlayOffChampionship.Interfaces
     {
 
         Task<PlayerLeague> Create(PlayerLeague playerLeague);
+        Task<bool> JoinLeague(Player player, League league);
     }
 }

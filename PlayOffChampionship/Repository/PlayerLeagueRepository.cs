@@ -1,8 +1,10 @@
-﻿using PlayOffChampionship.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 
 namespace PlayOffChampionship.Repository
 {
+
     public class PlayerLeagueRepository : IPlayerLeagueRepository
     {
 
@@ -21,6 +23,52 @@ namespace PlayOffChampionship.Repository
 
             return playerLeague;
 
+        }
+
+        public async Task<bool> JoinLeague(Player player, League league)
+        {
+
+            try
+            {
+
+                PlayerLeague playerLeague = new()
+                {
+                    Player = player,
+                    League = league
+                };
+
+                //create record of player and leauge so that a player has offically joined a league
+                _context.PlayerLeagues.Add(playerLeague);
+
+                //create player's record of leaderboard in the given league
+
+                Leaderboard leaderboard = new()
+                {
+                    League = league,
+                    Player = player,
+                    TotalMatches = 0,
+                    TotalWins = 0
+                };
+
+
+                _context.Leaderboard.Add(leaderboard);
+
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine(ex.InnerException.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+
+            
         }
     }
 }

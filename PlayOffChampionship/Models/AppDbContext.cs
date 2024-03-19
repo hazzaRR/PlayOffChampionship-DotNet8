@@ -19,6 +19,9 @@ namespace PlayOffChampionship.Models
         {
             modelBuilder.Entity<PlayerLeague>()
                 .HasKey(pl => new { pl.PlayerId, pl.LeagueId });
+
+            modelBuilder.Entity<Leaderboard>()
+                .HasIndex(l => new { l.PlayerId, l.LeagueId }).IsUnique();
         }
 
     }
