@@ -1,4 +1,6 @@
-﻿using PlayOffChampionship.Models;
+﻿using PlayOffChampionship.Dtos;
+using PlayOffChampionship.Models;
+using System.Reflection;
 
 namespace PlayOffChampionship.Interfaces
 {
@@ -13,7 +15,7 @@ namespace PlayOffChampionship.Interfaces
 
         Task<List<Match>> GetByWinnerId(int winnerId);
 
-        Task<Match> Create(Match match);
+        Task<Match> Create(CreateMatchDto createMatchDto, Player player1, Player player2, League league, Player winner);
 
         Task<Match?> Update(int id, Match match);
 

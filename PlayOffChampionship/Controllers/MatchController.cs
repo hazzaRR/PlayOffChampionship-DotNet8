@@ -67,8 +67,7 @@ namespace PlayOffChampionship.Controllers
                 return NotFound("one of the players or league supplied does not exist");
             }
 
-            Match matchModel = createMatchDto.ToMatchFromCreateMatchDto(player1, player2, league, winner);
-            var match = await _matchRepository.Create(matchModel);
+            var match = await _matchRepository.Create(createMatchDto, player1, player2, league, winner);
 
 
             return Created();

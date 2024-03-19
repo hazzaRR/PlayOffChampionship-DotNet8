@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
+using PlayOffChampionship.Mappers;
+using System.Numerics;
 
 namespace PlayOffChampionship.Repository
 {
@@ -13,12 +16,79 @@ namespace PlayOffChampionship.Repository
         {
             _context = context;
         }
-        public async Task<Match> Create(Match match)
+        public async Task<Match> Create(CreateMatchDto createMatchDto, Player player1, Player player2, League league, Player winner)
         {
-            _context.Matches.Add(match);
+
+            Match matchModel = createMatchDto.ToMatchFromCreateMatchDto(player1, player2, league, winner);
+            
+
+            //add match to the database
+            var match = _context.Matches.Add(matchModel);
+
+
+            //get the winnersLeaderboard and update their rankings
+            var winnerLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.Player == winner && leaderboard.League == league);
+            if (winnerLeaderboard != null)
+            {
+                winnerLeaderboard.TotalMatches = winnerLeaderboard.TotalMatches + 1;
+                winnerLeaderboard.TotalWins = winnerLeaderboard.TotalWins + 1;
+                winnerLeaderboard.Points = winnerLeaderboard.Points + 3;
+            }
+            else
+            {
+                Leaderboard leaderboard = new()
+                {
+                    League = league,
+                    Player = winner,
+                    TotalMatches = 1,
+                    TotalWins = 1,
+                    Points = 3
+                };
+
+
+                _context.Leaderboard.Add(leaderboard);
+            }
+            
+
+            //find the losers leaderboard by checking for the playersId that is not equal to the winner
+            Leaderboard? loserLeaderboard;
+            Player? loser;
+
+            if (player1.Id != winner.Id)
+            {
+                loser = player1;
+                loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.Player == player1 && leaderboard.League == league);
+            }
+            else
+            {
+                loser = player2;
+                loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.Player == player2 && leaderboard.League == league);
+            }
+
+            //update their leaderboard stats
+            if (loserLeaderboard != null)
+            {
+                loserLeaderboard.TotalMatches = loserLeaderboard.TotalMatches + 1;
+            }
+            else
+            {
+                Leaderboard leaderboard = new()
+                {
+                    League = league,
+                    Player = loser,
+                    TotalMatches = 1,
+                    TotalWins = 0,
+                    Points = 0
+                };
+
+
+                _context.Leaderboard.Add(leaderboard);
+            }
+            
+
             await _context.SaveChangesAsync();
 
-            return match;
+            return matchModel;
 
         }
 
