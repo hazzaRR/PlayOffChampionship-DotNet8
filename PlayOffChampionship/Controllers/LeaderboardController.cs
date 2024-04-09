@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlayOffChampionship.Interfaces;
+using PlayOffChampionship.Mappers;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -23,7 +24,7 @@ namespace PlayOffChampionship.Controllers
         {
             var leaderboard = await _leaderboardRepository.GetByLeagueId(id);
 
-            return Ok(leaderboard);
+            return Ok(leaderboard.Select(row => row.ToLeaderboardDtoFromLeaderboard()));
         }
 
         [HttpGet("league/{id}/player/{playerId}")]
@@ -31,7 +32,12 @@ namespace PlayOffChampionship.Controllers
         {
             var leaderboard = await _leaderboardRepository.GetByLeagueIdAndPlayerId(id, playerId);
 
-            return Ok(leaderboard);
+            if (leaderboard == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(leaderboard.ToLeaderboardDtoFromLeaderboard());
         }
     }
 }
