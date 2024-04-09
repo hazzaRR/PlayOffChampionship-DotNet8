@@ -29,9 +29,12 @@ namespace PlayOffChampionship.Repository
             return leaderboard;
         }
 
-        public Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int playerId)
+        public async Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int playerId)
         {
-            throw new NotImplementedException();
+            var leaderboard = await _context.Leaderboard.FirstOrDefaultAsync(row => row.LeagueId == leagueId && row.PlayerId == playerId);
+
+
+            return leaderboard;
         }
 
         public Task<Leaderboard> Update(Leaderboard leaderboard)
@@ -39,9 +42,5 @@ namespace PlayOffChampionship.Repository
             throw new NotImplementedException();
         }
 
-        public Task<Leaderboard> UpdateLeaderboard(Leaderboard leaderboard)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

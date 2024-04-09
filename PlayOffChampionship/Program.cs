@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 using PlayOffChampionship.Repository;
@@ -9,11 +10,11 @@ string? DbConnectionString;
 
 if (builder.Environment.IsDevelopment())
 {
-    DbConnectionString = builder.Configuration["DbConnectionDevelopment"];
+    DbConnectionString = builder.Configuration.GetConnectionString("DbConnectionDevelopment");
 }
 else
 {
-    DbConnectionString = builder.Configuration["DbConnectionProduction"];
+    DbConnectionString = builder.Configuration.GetConnectionString("DbConnectionProduction");
 }
 
 // Add services to the container.
