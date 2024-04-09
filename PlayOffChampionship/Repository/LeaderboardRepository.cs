@@ -31,7 +31,7 @@ namespace PlayOffChampionship.Repository
 
         public async Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int playerId)
         {
-            var leaderboard = await _context.Leaderboard.FirstOrDefaultAsync(row => row.LeagueId == leagueId && row.PlayerId == playerId);
+            var leaderboard = await _context.Leaderboard.Include(match => match.Player).Include(match => match.League).FirstOrDefaultAsync(row => row.LeagueId == leagueId && row.PlayerId == playerId);
 
 
             return leaderboard;

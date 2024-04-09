@@ -25,5 +25,13 @@ namespace PlayOffChampionship.Controllers
 
             return Ok(leaderboard);
         }
+
+        [HttpGet("league/{id}/player/{playerId}")]
+        public async Task<IActionResult> GetByLeagueId([FromRoute] int id, [FromRoute] int playerId)
+        {
+            var leaderboard = await _leaderboardRepository.GetByLeagueIdAndPlayerId(id, playerId);
+
+            return Ok(leaderboard);
+        }
     }
 }
