@@ -101,6 +101,36 @@ namespace PlayOffChampionship.Repository
                 return null;
             }
 
+            Leaderboard? winnerLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.WinnerId);
+
+            if (winnerLeaderboard == null)
+            {
+                return null;
+            }
+
+            winnerLeaderboard.TotalMatches = winnerLeaderboard.TotalMatches - 1;
+            winnerLeaderboard.Points = winnerLeaderboard.Points - 3;
+            winnerLeaderboard.TotalWins = winnerLeaderboard.TotalWins - 1;
+
+            Leaderboard? loserLeaderboard;
+
+            if (match.Winner != match.Player1)
+            {
+                loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player1Id);
+            }
+            else
+            {
+                loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player2Id);
+            }
+
+            loserLeaderboard.TotalMatches = loserLeaderboard.TotalMatches - 1;
+
+            if (loserLeaderboard == null)
+            {
+                return null;
+            }
+
+
             _context.Matches.Remove(match);
             await _context.SaveChangesAsync();
 

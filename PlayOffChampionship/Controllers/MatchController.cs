@@ -74,6 +74,23 @@ namespace PlayOffChampionship.Controllers
         }
 
 
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+
+            Match? match = await _matchRepository.Delete(id);
+            
+            if (match == null)
+            {
+                return NotFound($"match with ID: {id} does not exist");
+            }
+
+            return NoContent();
+
+        }
+
+
 
     }
 }
