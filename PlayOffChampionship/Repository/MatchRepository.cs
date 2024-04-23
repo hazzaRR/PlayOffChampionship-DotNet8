@@ -196,9 +196,31 @@ namespace PlayOffChampionship.Repository
             return matches;
         }
 
-        public Task<Match?> Update(int id, Match match)
+        public async Task<Match?> Update(int id, Match match)
         {
-            throw new NotImplementedException();
+            var matchObject = await _context.Matches.FirstOrDefaultAsync(match => match.Id == id);
+
+
+            if (matchObject == null)
+            {
+                return null;
+            }
+
+            matchObject.Player1 = match.Player1;
+            matchObject.Player2 = match.Player2;
+            matchObject.Winner = match.Winner;
+            matchObject.WinnerId = match.WinnerId;
+            matchObject.Player2Id = match.Player2Id;
+            matchObject.Player1Id = match.Player1Id;
+            matchObject.League = match.League;
+            matchObject.LeagueId = match.LeagueId;
+            matchObject.Player1Score = match.Player1Score;
+            matchObject.Player2Score = match.Player2Score;
+
+            await _context.SaveChangesAsync();
+
+            return matchObject;
+
         }
     }
 }
