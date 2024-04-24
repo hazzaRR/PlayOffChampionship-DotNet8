@@ -17,7 +17,7 @@ namespace PlayOffChampionship.Interfaces
 
         Task<Match> Create(CreateMatchDto createMatchDto, Player player1, Player player2, League league, Player winner);
 
-        Task<Match?> Update(int id, Match match);
+        Task<Match?> Update(int id, MatchDto match);
 
         Task<Match?> Delete(int id);
 

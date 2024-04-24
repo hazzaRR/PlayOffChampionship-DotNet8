@@ -28,6 +28,7 @@ namespace PlayOffChampionship.Mappers
         {
             MatchDto matchDto = new()
             {
+                Id = match.Id,
                 MatchDate = match.MatchDate,
                 Player1 = match.Player1.ToPlayerDtoFromPlayer(),
                 Player2 = match.Player2.ToPlayerDtoFromPlayer(),

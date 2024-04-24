@@ -91,6 +91,21 @@ namespace PlayOffChampionship.Controllers
         }
 
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] int id, MatchDto matchDto)
+        {
+
+            Match? match = await _matchRepository.Update(id, matchDto);
+
+            if (match == null)
+            {
+                return BadRequest("Error with the data passed");
+
+            }
+
+            return NoContent();
+        }
+
 
     }
 }

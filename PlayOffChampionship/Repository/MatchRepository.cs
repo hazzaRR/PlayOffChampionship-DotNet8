@@ -123,12 +123,12 @@ namespace PlayOffChampionship.Repository
                 loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player2Id);
             }
 
-            loserLeaderboard.TotalMatches = loserLeaderboard.TotalMatches - 1;
-
             if (loserLeaderboard == null)
             {
                 return null;
             }
+
+            loserLeaderboard.TotalMatches = loserLeaderboard.TotalMatches - 1;
 
 
             _context.Matches.Remove(match);
@@ -196,7 +196,7 @@ namespace PlayOffChampionship.Repository
             return matches;
         }
 
-        public async Task<Match?> Update(int id, Match match)
+        public async Task<Match?> Update(int id, MatchDto match)
         {
             var matchObject = await _context.Matches.FirstOrDefaultAsync(match => match.Id == id);
 
@@ -206,7 +206,7 @@ namespace PlayOffChampionship.Repository
                 return null;
             }
 
-            //check if the winner of the game has changed if so update the leaderboard for that league aswell
+            //check if the winner of the game has changed if so update the leaderboard for that league as well
 
             if (matchObject.WinnerId != match.WinnerId)
             {
@@ -232,14 +232,17 @@ namespace PlayOffChampionship.Repository
                     loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player2Id && leaderboard.LeagueId == match.LeagueId);
                 }
 
+
+                if (loserLeaderboard == null)
+                {
+                    return null;
+                }
+
                 loserLeaderboard.TotalWins -= 1;
                 loserLeaderboard.Points -= 3;
             }
 
-            matchObject.Player1 = match.Player1;
-            matchObject.Player2 = match.Player2;
 
-            matchObject.Winner = match.Winner;
             matchObject.WinnerId = match.WinnerId;
 
             matchObject.Player2Id = match.Player2Id;
