@@ -206,16 +206,48 @@ namespace PlayOffChampionship.Repository
                 return null;
             }
 
+            //check if the winner of the game has changed if so update the leaderboard for that league aswell
+
+            if (matchObject.WinnerId != match.WinnerId)
+            {
+
+                Leaderboard? winnerLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.WinnerId && leaderboard.LeagueId == match.LeagueId);
+
+                if (winnerLeaderboard == null)
+                {
+                    return null;
+                }
+
+                winnerLeaderboard.TotalWins += 1;
+                winnerLeaderboard.Points += 3;
+
+                Leaderboard? loserLeaderboard;
+                
+                if (match.Player1Id != match.WinnerId)
+                {
+                    loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player1Id && leaderboard.LeagueId == match.LeagueId);
+                }
+                else
+                {
+                    loserLeaderboard = await _context.Leaderboard.FirstOrDefaultAsync(leaderboard => leaderboard.PlayerId == match.Player2Id && leaderboard.LeagueId == match.LeagueId);
+                }
+
+                loserLeaderboard.TotalWins -= 1;
+                loserLeaderboard.Points -= 3;
+            }
+
             matchObject.Player1 = match.Player1;
             matchObject.Player2 = match.Player2;
+
             matchObject.Winner = match.Winner;
             matchObject.WinnerId = match.WinnerId;
+
             matchObject.Player2Id = match.Player2Id;
             matchObject.Player1Id = match.Player1Id;
-            matchObject.League = match.League;
-            matchObject.LeagueId = match.LeagueId;
+
             matchObject.Player1Score = match.Player1Score;
             matchObject.Player2Score = match.Player2Score;
+
 
             await _context.SaveChangesAsync();
 
