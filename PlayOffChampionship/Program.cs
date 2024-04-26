@@ -4,6 +4,8 @@ using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 using PlayOffChampionship.Repository;
 
+var allowedOrigins = "allowedOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 string? DbConnectionString;
@@ -17,6 +19,7 @@ else
     DbConnectionString = builder.Configuration.GetConnectionString("DbConnectionProduction");
 }
 
+
 // Add services to the container.
 
 builder.Services.AddScoped<ILeagueRepository, LeagueRepository>();
@@ -29,6 +32,22 @@ builder.Services.AddHealthChecks();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowedOrigins,
+    policy =>
+    {
+        policy
+        .WithOrigins("http://localhost:5173")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+
+    });
+
+});
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -52,5 +71,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapHealthChecks("health");
+
+app.UseCors(allowedOrigins);
 
 app.Run();
