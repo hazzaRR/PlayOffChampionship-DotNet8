@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayOffChampionship", "PlayOffChampionship\PlayOffChampionship.csproj", "{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayOffChampionship", "PlayOffChampionship\PlayOffChampionship.csproj", "{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayOffChampionship.Tests", "PlayOffChampionship.Tests\PlayOffChampionship.Tests.csproj", "{79408265-47F8-4A07-BD89-F479562D22B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayOffChampionship.Tests", "PlayOffChampionship.Tests\PlayOffChampionship.Tests.csproj", "{79408265-47F8-4A07-BD89-F479562D22B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
