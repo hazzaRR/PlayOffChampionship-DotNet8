@@ -28,7 +28,7 @@ namespace PlayOffChampionship.Controllers
         }
 
         [HttpGet("league/{id}/player/{playerId}")]
-        public async Task<IActionResult> GetByLeagueId([FromRoute] int id, [FromRoute] int playerId)
+        public async Task<IActionResult> GetByLeagueId([FromRoute] int id, [FromRoute] string playerId)
         {
             var leaderboard = await _leaderboardRepository.GetByLeagueIdAndPlayerId(id, playerId);
 

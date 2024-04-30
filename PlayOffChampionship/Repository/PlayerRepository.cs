@@ -15,23 +15,23 @@ namespace PlayOffChampionship.Repository
 
         public async Task<ApplicationUser> Create(ApplicationUser player)
         {
-            _context.Players.Add(player);
+            _context.Users.Add(player);
 
             await _context.SaveChangesAsync();
 
             return player;
         }
 
-        public async Task<ApplicationUser?> Delete(int id)
+        public async Task<ApplicationUser?> Delete(string id)
         {
-            var player = await _context.Players.FirstOrDefaultAsync(p => p.Id == id);
+            var player = await _context.Users.FirstOrDefaultAsync(p => p.Id == id);
 
             if (player == null)
             {
                 return null;
             }
 
-            _context.Players.Remove(player);
+            _context.Users.Remove(player);
 
             await _context.SaveChangesAsync();
 
@@ -40,15 +40,15 @@ namespace PlayOffChampionship.Repository
 
         public async Task<List<ApplicationUser>> GetAllPlayers()
         {
-            return await _context.Players.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        public async Task<ApplicationUser?> GetPlayerById(int id)
+        public async Task<ApplicationUser?> GetPlayerById(string id)
         {
-            return await _context.Players.FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Users.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public Task<ApplicationUser?> Update(int id, ApplicationUser player)
+        public Task<ApplicationUser?> Update(string id, ApplicationUser player)
         {
             throw new NotImplementedException();
         }

@@ -6,10 +6,10 @@ namespace PlayOffChampionship.Interfaces
     {
 
         Task<List<ApplicationUser>> GetAllPlayers();
-        Task<ApplicationUser?> GetPlayerById(int id);
+        Task<ApplicationUser?> GetPlayerById(string id);
         Task<ApplicationUser> Create(ApplicationUser player);
-        Task<ApplicationUser?> Update(int id, ApplicationUser player);
-        Task<ApplicationUser?> Delete(int id);
+        Task<ApplicationUser?> Update(string id, ApplicationUser player);
+        Task<ApplicationUser?> Delete(string id);
 
 
     }

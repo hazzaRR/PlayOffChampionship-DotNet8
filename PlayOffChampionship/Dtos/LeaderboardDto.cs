@@ -6,7 +6,7 @@ namespace PlayOffChampionship.Dtos
     {
 
         public int Id { get; set; }
-        public int PlayerId { get; set; }
+        public required string PlayerId { get; set; }
         public int LeagueId { get; set; }
         public int TotalWins { get; set; } = 0;
         public int TotalMatches { get; set; } = 0;

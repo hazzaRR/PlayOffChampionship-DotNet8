@@ -30,7 +30,7 @@ namespace PlayOffChampionship.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public async Task<IActionResult> GetById([FromRoute] string id)
         {
             var player = await _playerRepository.GetPlayerById(id);
 
@@ -53,7 +53,7 @@ namespace PlayOffChampionship.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public async Task<IActionResult> Delete([FromRoute] string id)
         {
             var player = await _playerRepository.Delete(id);
 

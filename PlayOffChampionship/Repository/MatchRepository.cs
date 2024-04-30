@@ -168,7 +168,7 @@ namespace PlayOffChampionship.Repository
                 return matches;
             }
 
-        public async Task<List<Match>> GetByPlayerId(int playerId)
+        public async Task<List<Match>> GetByPlayerId(string playerId)
         {
             var matches = await _context.Matches
             .Include(match => match.Player1)
@@ -182,7 +182,7 @@ namespace PlayOffChampionship.Repository
             return matches;
         }
 
-        public async Task<List<Match>> GetByWinnerId(int winnerId)
+        public async Task<List<Match>> GetByWinnerId(string winnerId)
         {
             var matches = await _context.Matches
             .Include(match => match.Player1)

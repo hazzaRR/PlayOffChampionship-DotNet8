@@ -24,7 +24,7 @@ namespace PlayOffChampionship.Controllers
         }
 
         [HttpPost("join/{id}/player/{playerId}")]
-        public async Task<IActionResult> Create([FromRoute] int id, [FromRoute] int playerId)
+        public async Task<IActionResult> Create([FromRoute] int id, [FromRoute] string playerId)
         {
 
             League? league = await _leagueRepository.GetLeagueById(id);

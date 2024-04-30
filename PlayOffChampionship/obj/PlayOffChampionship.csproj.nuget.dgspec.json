@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\PlayOffChampionship.csproj": {}
+    "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\PlayOffChampionship.csproj": {}
   },
   "projects": {
-    "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\PlayOffChampionship.csproj": {
+    "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\PlayOffChampionship.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\PlayOffChampionship.csproj",
+        "projectUniqueName": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\PlayOffChampionship.csproj",
         "projectName": "PlayOffChampionship",
-        "projectPath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\PlayOffChampionship.csproj",
+        "projectPath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\PlayOffChampionship.csproj",
         "packagesPath": "C:\\Users\\redma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\obj\\",
+        "outputPath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

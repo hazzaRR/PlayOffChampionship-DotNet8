@@ -37,7 +37,7 @@ namespace PlayOffChampionship.Controllers
         }
 
         [HttpGet("player/{id}")]
-        public async Task<IActionResult> GetByPlayerId([FromRoute] int id)
+        public async Task<IActionResult> GetByPlayerId([FromRoute] string id)
         {
             var matches = await _matchRepository.GetByPlayerId(id);
 

@@ -8,7 +8,7 @@ namespace PlayOffChampionship.Interfaces
        Task<List<Leaderboard>> GetByLeagueId(int leagueId);
 
 
-        Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, int  playerId);
+        Task<Leaderboard?> GetByLeagueIdAndPlayerId(int leagueId, string playerId);
 
         Task<Leaderboard> Create(Leaderboard leaderboard);
 
