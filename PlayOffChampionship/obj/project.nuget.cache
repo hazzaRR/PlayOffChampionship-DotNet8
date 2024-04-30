@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RslVq9hNXa6D41h0xOYlc7NE2DqNUy1bQnR/jrmGHvECAp+nL7oT4Eo5SHrxg8OCNDito5HM2CNX5LLCaI8w5g==",
+  "dgSpecHash": "XOF8QVX6RDWwNdZzpic2LFRBU0wANaFwV3aguF1aHSaVnVgQI/Kn5a43RZHq/8WZrwidbCorCr2Bqbe2tcJCxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\PlayOffChampionship.csproj",
+  "projectFilePath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\playoffchampionship\\PlayOffChampionship.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\redma\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\redma\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",

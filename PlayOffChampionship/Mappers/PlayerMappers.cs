@@ -6,9 +6,9 @@ namespace PlayOffChampionship.Mappers
     public static class PlayerMappers
     {
 
-        public static Player ToPlayerFromPlayerDto(this PlayerDto playerDto)
+        public static ApplicationUser ToPlayerFromPlayerDto(this PlayerDto playerDto)
         {
-            Player player = new()
+            ApplicationUser player = new()
             {
                 Name = playerDto.Name
             };
@@ -16,7 +16,7 @@ namespace PlayOffChampionship.Mappers
             return player;
         }
 
-        public static PlayerDto ToPlayerDtoFromPlayer(this Player player)
+        public static PlayerDto ToPlayerDtoFromPlayer(this ApplicationUser player)
         {
             PlayerDto playerDto = new()
             {

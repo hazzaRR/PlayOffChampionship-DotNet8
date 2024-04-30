@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Interfaces;
@@ -20,6 +21,8 @@ namespace PlayOffChampionship.Controllers
             _leagueRepository = leagueRepository;
         }
 
+
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllLeagues()
         {

@@ -25,7 +25,7 @@ namespace PlayOffChampionship.Repository
 
         }
 
-        public async Task<bool> JoinLeague(Player player, League league)
+        public async Task<bool> JoinLeague(ApplicationUser player, League league)
         {
 
             try

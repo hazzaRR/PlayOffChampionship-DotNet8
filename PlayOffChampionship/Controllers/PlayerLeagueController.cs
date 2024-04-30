@@ -33,7 +33,7 @@ namespace PlayOffChampionship.Controllers
             {
                 return NotFound($"A league with the id {id} does not exist");
             }
-            Player? player = await _playerRepository.GetPlayerById(playerId);
+            ApplicationUser? player = await _playerRepository.GetPlayerById(playerId);
             if (player == null)
             {
                 return NotFound($"A player with the id {id} does not exist");

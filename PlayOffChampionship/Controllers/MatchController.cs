@@ -57,10 +57,10 @@ namespace PlayOffChampionship.Controllers
         public async Task<IActionResult> Create([FromBody] CreateMatchDto createMatchDto)
         {
 
-            Player? player1 = await _playerRepository.GetPlayerById(createMatchDto.Player1Id);
-            Player? player2 = await _playerRepository.GetPlayerById(createMatchDto.Player2Id);
+            ApplicationUser? player1 = await _playerRepository.GetPlayerById(createMatchDto.Player1Id);
+            ApplicationUser? player2 = await _playerRepository.GetPlayerById(createMatchDto.Player2Id);
             League? league = await _leagueRepository.GetLeagueById(createMatchDto.LeagueId);
-            Player? winner = await _playerRepository.GetPlayerById(createMatchDto.WinnerId);
+            ApplicationUser? winner = await _playerRepository.GetPlayerById(createMatchDto.WinnerId);
 
             if (player1 == null || player2 == null || league == null || winner == null)
             {

@@ -6,7 +6,7 @@ namespace PlayOffChampionship.Mappers
     public static class MatchMappers
     {
 
-        public static Match ToMatchFromCreateMatchDto(this CreateMatchDto matchDto, Player player1, Player player2, League league, Player winner)
+        public static Match ToMatchFromCreateMatchDto(this CreateMatchDto matchDto, ApplicationUser player1, ApplicationUser player2, League league, ApplicationUser winner)
         {
 
             Match match = new()

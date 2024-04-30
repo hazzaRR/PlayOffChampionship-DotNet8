@@ -15,7 +15,7 @@ namespace PlayOffChampionship.Interfaces
 
         Task<List<Match>> GetByWinnerId(int winnerId);
 
-        Task<Match> Create(CreateMatchDto createMatchDto, Player player1, Player player2, League league, Player winner);
+        Task<Match> Create(CreateMatchDto createMatchDto, ApplicationUser player1, ApplicationUser player2, League league, ApplicationUser winner);
 
         Task<Match?> Update(int id, MatchDto match);
 

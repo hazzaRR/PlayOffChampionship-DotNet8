@@ -16,7 +16,7 @@ namespace PlayOffChampionship.Repository
         {
             _context = context;
         }
-        public async Task<Match> Create(CreateMatchDto createMatchDto, Player player1, Player player2, League league, Player winner)
+        public async Task<Match> Create(CreateMatchDto createMatchDto, ApplicationUser player1, ApplicationUser player2, League league, ApplicationUser winner)
         {
 
             Match matchModel = createMatchDto.ToMatchFromCreateMatchDto(player1, player2, league, winner);
@@ -52,7 +52,7 @@ namespace PlayOffChampionship.Repository
 
             //find the losers leaderboard by checking for the playersId that is not equal to the winner
             Leaderboard? loserLeaderboard;
-            Player? loser;
+            ApplicationUser? loser;
 
             if (player1.Id != winner.Id)
             {

@@ -1,12 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PlayOffChampionship.Models
 {
 
-    [Table("player")]
-    public class Player
+    public class ApplicationUser: IdentityUser
     {
-        public int Id { get; set; }
 
         public string? Name { get; set; }
 

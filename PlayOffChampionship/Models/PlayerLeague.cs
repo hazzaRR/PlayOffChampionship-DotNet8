@@ -8,8 +8,8 @@ namespace PlayOffChampionship.Models
     public class PlayerLeague
     {
 
-        public int PlayerId { get; set; }
-        public required Player Player { get; set; }
+        public required string PlayerId { get; set; }
+        public required ApplicationUser Player { get; set; }
 
         public int LeagueId { get; set; }
         public required League League { get; set; }

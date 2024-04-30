@@ -45,7 +45,7 @@ namespace PlayOffChampionship.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] PlayerDto playerDto)
         {
-            Player player = playerDto.ToPlayerFromPlayerDto();
+            ApplicationUser player = playerDto.ToPlayerFromPlayerDto();
 
             var playerModel = await _playerRepository.Create(player);
 

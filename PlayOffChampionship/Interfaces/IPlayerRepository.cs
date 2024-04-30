@@ -5,11 +5,11 @@ namespace PlayOffChampionship.Interfaces
     public interface IPlayerRepository
     {
 
-        Task<List<Player>> GetAllPlayers();
-        Task<Player?> GetPlayerById(int id);
-        Task<Player> Create(Player player);
-        Task<Player?> Update(int id, Player player);
-        Task<Player?> Delete(int id);
+        Task<List<ApplicationUser>> GetAllPlayers();
+        Task<ApplicationUser?> GetPlayerById(int id);
+        Task<ApplicationUser> Create(ApplicationUser player);
+        Task<ApplicationUser?> Update(int id, ApplicationUser player);
+        Task<ApplicationUser?> Delete(int id);
 
 
     }
