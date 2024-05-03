@@ -58,6 +58,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddAuthorization();
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services
     .AddIdentityApiEndpoints<ApplicationUser>(options => { })
     .AddEntityFrameworkStores<AppDbContext>();
