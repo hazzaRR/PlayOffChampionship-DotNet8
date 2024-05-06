@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
+using System.Security.Claims;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -23,9 +25,23 @@ namespace PlayOffChampionship.Controllers
             _leaderboardRepository = leaderboardRepository;
         }
 
-        [HttpPost("join/{id}/player/{playerId}")]
-        public async Task<IActionResult> Create([FromRoute] int id, [FromRoute] string playerId)
+
+
+        [Authorize]
+        [HttpPost("join/{id}")]
+        public async Task<IActionResult> Create([FromRoute] int id)
         {
+
+            string? userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+
+            Console.WriteLine(userId);
+
 
             League? league = await _leagueRepository.GetLeagueById(id);
 
@@ -33,7 +49,8 @@ namespace PlayOffChampionship.Controllers
             {
                 return NotFound($"A league with the id {id} does not exist");
             }
-            ApplicationUser? player = await _playerRepository.GetPlayerById(playerId);
+
+            ApplicationUser? player = await _playerRepository.GetPlayerById(userId);
             if (player == null)
             {
                 return NotFound($"A player with the id {id} does not exist");
