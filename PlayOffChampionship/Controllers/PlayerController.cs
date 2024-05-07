@@ -6,6 +6,7 @@ using PlayOffChampionship.Mappers;
 using PlayOffChampionship.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using System.Numerics;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -78,6 +79,26 @@ namespace PlayOffChampionship.Controllers
 
             return Ok(player);
         }
+
+
+
+        [Authorize]
+        [HttpPut("set-details")]
+        public async Task<IActionResult> setupUserDetails(PlayerDto playerDto)
+        {
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+            var playerModel = await _playerRepository.Update(userId, playerDto);
+
+
+            return NoContent();
+        }
+
 
     }
 }

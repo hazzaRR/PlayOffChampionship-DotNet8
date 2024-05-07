@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 
@@ -48,9 +49,23 @@ namespace PlayOffChampionship.Repository
             return await _context.Users.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public Task<ApplicationUser?> Update(string id, ApplicationUser player)
+        public async Task<ApplicationUser?> Update(string id, PlayerDto playerDto)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            user.Name = playerDto.Name;
+
+            await _context.SaveChangesAsync();
+
+
+            return user;
+
+
         }
     }
 }
