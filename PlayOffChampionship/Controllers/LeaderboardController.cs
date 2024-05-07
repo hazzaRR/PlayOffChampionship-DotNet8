@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Mappers;
+using System.Security.Claims;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -27,10 +29,21 @@ namespace PlayOffChampionship.Controllers
             return Ok(leaderboard.Select(row => row.ToLeaderboardDtoFromLeaderboard()));
         }
 
-        [HttpGet("league/{id}/player/{playerId}")]
-        public async Task<IActionResult> GetByLeagueId([FromRoute] int id, [FromRoute] string playerId)
+
+        [Authorize]
+        [HttpGet("league/{id}/player")]
+        public async Task<IActionResult> GetByLeagueIdAndPlayer([FromRoute] int id)
+
         {
-            var leaderboard = await _leaderboardRepository.GetByLeagueIdAndPlayerId(id, playerId);
+
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+            var leaderboard = await _leaderboardRepository.GetByLeagueIdAndPlayerId(id, userId);
 
             if (leaderboard == null)
             {

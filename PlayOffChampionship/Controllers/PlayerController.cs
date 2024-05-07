@@ -4,6 +4,8 @@ using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Models;
 using PlayOffChampionship.Mappers;
 using PlayOffChampionship.Dtos;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -52,14 +54,26 @@ namespace PlayOffChampionship.Controllers
             return Created();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] string id)
+
+        [Authorize]
+        [HttpDelete]
+        public async Task<IActionResult> Delete()
         {
-            var player = await _playerRepository.Delete(id);
+
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+
+            var player = await _playerRepository.Delete(userId);
+
 
             if (player == null)
             {
-                return NotFound($"Player with the id: {id} does not exist");
+                return NotFound($"Player with the id: {userId} does not exist");
             }
 
             return Ok(player);
