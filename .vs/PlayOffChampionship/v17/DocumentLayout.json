@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\repository\\playerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\repository\\playerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\leaderboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\leaderboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\leaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\leaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\repository\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\repository\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\playerleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\playerleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\repository\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,32 +39,12 @@
       "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\interfaces\\iplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\repository\\playerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\repository\\playerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\interfaces\\iplayerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\interfaces\\iplayerleaguerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\leaderboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\leaderboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\leaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\leaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\controllers\\playerleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|solutionrelative:playoffchampionship\\controllers\\playerleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99D4D42-F723-4FA0-B0C9-5CE874F7015D}|PlayOffChampionship\\PlayOffChampionship.csproj|c:\\users\\redma\\documents\\coding projects\\c#\\playoffchampionship\\playoffchampionship\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,20 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MatchRepository.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\MatchRepository.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Repository\\MatchRepository.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\MatchRepository.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Repository\\MatchRepository.cs",
-              "ViewState": "AQIAAOsAAAAAAAAAAADwv/4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:06:12.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "PlayerRepository.cs",
               "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\PlayerRepository.cs",
               "RelativeDocumentMoniker": "PlayOffChampionship\\Repository\\PlayerRepository.cs",
@@ -139,12 +126,74 @@
               "RelativeToolTip": "PlayOffChampionship\\Repository\\PlayerRepository.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAowD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:04:42.02Z",
+              "WhenOpened": "2024-05-07T12:04:42.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeagueController.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeagueController.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\LeagueController.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeagueController.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Controllers\\LeagueController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAA5wDEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T19:34:37.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaderboardController.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeaderboardController.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\LeaderboardController.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeaderboardController.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Controllers\\LeaderboardController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAQwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T20:15:16.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MatchController.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\MatchController.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\MatchController.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\MatchController.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Controllers\\MatchController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwEgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T19:34:41.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerLeagueRepository.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T18:20:47.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPlayerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T13:03:42.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\PlayerController.cs",
               "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\PlayerController.cs",
@@ -158,54 +207,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IPlayerLeagueRepository.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "PlayerLeagueController.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAAD4AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T16:19:17.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T20:12:52.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPlayerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Interfaces\\IPlayerRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T13:03:42.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerLeagueRepository.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Repository\\PlayerLeagueRepository.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T18:20:47.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T19:26:44.273Z"
             },
             {
               "$type": "Document",
@@ -221,55 +230,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LeaderboardController.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeaderboardController.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\LeaderboardController.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeaderboardController.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Controllers\\LeaderboardController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAYwCgAAAAAAAAA",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T20:15:16.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T20:12:52.042Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "PlayerLeagueController.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Controllers\\PlayerLeagueController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAAAAAA",
+              "Title": "IPlayerLeagueRepository.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Interfaces\\IPlayerLeagueRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T19:26:44.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T16:19:17.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LeagueController.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeagueController.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\LeagueController.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\LeagueController.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Controllers\\LeagueController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAgwDEAAABEAAAA",
+              "DocumentIndex": 7,
+              "Title": "MatchRepository.cs",
+              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\MatchRepository.cs",
+              "RelativeDocumentMoniker": "PlayOffChampionship\\Repository\\MatchRepository.cs",
+              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Repository\\MatchRepository.cs",
+              "RelativeToolTip": "PlayOffChampionship\\Repository\\MatchRepository.cs",
+              "ViewState": "AQIAAOsAAAAAAAAAAADwv/4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T19:34:37.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MatchController.cs",
-              "DocumentMoniker": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\MatchController.cs",
-              "RelativeDocumentMoniker": "PlayOffChampionship\\Controllers\\MatchController.cs",
-              "ToolTip": "C:\\Users\\redma\\Documents\\Coding Projects\\C#\\PlayOffChampionship\\PlayOffChampionship\\Controllers\\MatchController.cs",
-              "RelativeToolTip": "PlayOffChampionship\\Controllers\\MatchController.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T19:34:41.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T12:06:12.104Z"
             },
             {
               "$type": "Document",

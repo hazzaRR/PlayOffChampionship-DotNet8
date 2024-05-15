@@ -59,12 +59,10 @@ namespace PlayOffChampionship.Repository
             }
             catch (DbUpdateException ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
                 return false;
             }
 

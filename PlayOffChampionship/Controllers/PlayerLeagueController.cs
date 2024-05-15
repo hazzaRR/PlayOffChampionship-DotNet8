@@ -60,7 +60,7 @@ namespace PlayOffChampionship.Controllers
 
             if (!leaguePlayer)
             {
-                return BadRequest();
+                return BadRequest("User already a member of the league");
             }
 
             return Created();

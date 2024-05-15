@@ -70,7 +70,8 @@ namespace PlayOffChampionship.Controllers
             var match = await _matchRepository.Create(createMatchDto, player1, player2, league, winner);
 
 
-            return Created();
+            return Created(String.Empty, "Match created");
+            
         }
 
 
