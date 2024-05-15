@@ -24,7 +24,7 @@ namespace PlayOffChampionship.Repository
 
         public async Task<List<Leaderboard>> GetByLeagueId(int leagueId)
         {
-            var leaderboard = await _context.Leaderboard.Where(row => row.LeagueId == leagueId).OrderBy(row => row.TotalWins).Include(match => match.Player).Include(match => match.League).ToListAsync();
+            var leaderboard = await _context.Leaderboard.Where(row => row.LeagueId == leagueId).OrderByDescending(row => row.Points).ThenByDescending(row => row.TotalWins).Include(match => match.Player).Include(match => match.League).ToListAsync();
 
             return leaderboard;
         }
