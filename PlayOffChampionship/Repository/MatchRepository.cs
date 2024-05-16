@@ -108,9 +108,9 @@ namespace PlayOffChampionship.Repository
                 return null;
             }
 
-            winnerLeaderboard.TotalMatches = winnerLeaderboard.TotalMatches - 1;
-            winnerLeaderboard.Points = winnerLeaderboard.Points - 3;
-            winnerLeaderboard.TotalWins = winnerLeaderboard.TotalWins - 1;
+            winnerLeaderboard.TotalMatches--;
+            winnerLeaderboard.Points -= 3;
+            winnerLeaderboard.TotalWins--;
 
             Leaderboard? loserLeaderboard;
 
@@ -128,7 +128,7 @@ namespace PlayOffChampionship.Repository
                 return null;
             }
 
-            loserLeaderboard.TotalMatches = loserLeaderboard.TotalMatches - 1;
+            loserLeaderboard.TotalMatches--;
 
 
             _context.Matches.Remove(match);
@@ -162,6 +162,7 @@ namespace PlayOffChampionship.Repository
                 .Include(match => match.League)
                 .Include(match => match.Winner)
                 .Where(match => match.LeagueId == leagueId)
+                .OrderByDescending(match => match.MatchDate)
                 .ToListAsync();
 
 
@@ -176,6 +177,7 @@ namespace PlayOffChampionship.Repository
             .Include(match => match.League)
             .Include(match => match.Winner)
             .Where(match => match.Player1Id == playerId || match.Player2Id == playerId)
+            .OrderByDescending(match => match.MatchDate)
             .ToListAsync();
 
 
@@ -190,6 +192,7 @@ namespace PlayOffChampionship.Repository
             .Include(match => match.League)
             .Include(match => match.Winner)
             .Where(match => match.WinnerId == winnerId)
+            .OrderByDescending(match => match.MatchDate)
             .ToListAsync();
 
 
