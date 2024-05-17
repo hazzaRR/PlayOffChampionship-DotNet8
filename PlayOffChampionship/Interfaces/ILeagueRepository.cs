@@ -14,9 +14,5 @@ namespace PlayOffChampionship.Interfaces
         Task<League?> Update(int id, LeagueDto leagueDto);
 
         Task<League?> Delete(int id);
-
-
-
-
     }
 }

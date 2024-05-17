@@ -5,6 +5,8 @@ using PlayOffChampionship.Dtos;
 using PlayOffChampionship.Interfaces;
 using PlayOffChampionship.Mappers;
 using PlayOffChampionship.Models;
+using PlayOffChampionship.Repository;
+using System.Security.Claims;
 
 namespace PlayOffChampionship.Controllers
 {
@@ -32,7 +34,7 @@ namespace PlayOffChampionship.Controllers
         }
 
 
-        [HttpGet("{id}")]
+    [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
 

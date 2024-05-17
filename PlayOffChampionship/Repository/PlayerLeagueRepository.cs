@@ -25,6 +25,14 @@ namespace PlayOffChampionship.Repository
 
         }
 
+        public async Task<List<League>> GetAllPlayerLeagues(string userId)
+        {
+            return await _context.PlayerLeagues
+            .Where(pl => pl.PlayerId == userId)
+            .Select(pl => pl.League)
+            .ToListAsync();
+        }
+
         public async Task<bool> JoinLeague(ApplicationUser player, League league)
         {
 

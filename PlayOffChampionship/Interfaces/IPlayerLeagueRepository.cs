@@ -7,5 +7,7 @@ namespace PlayOffChampionship.Interfaces
 
         Task<PlayerLeague> Create(PlayerLeague playerLeague);
         Task<bool> JoinLeague(ApplicationUser player, League league);
+
+        Task<List<League>> GetAllPlayerLeagues(string userId);
     }
 }

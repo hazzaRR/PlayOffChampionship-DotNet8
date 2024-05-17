@@ -25,9 +25,31 @@ namespace PlayOffChampionship.Controllers
             _leaderboardRepository = leaderboardRepository;
         }
 
-
-
         [Authorize]
+        [HttpGet()]
+        public async Task<IActionResult> GetPlayerLeagues()
+
+        {
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+            var leagues = await _playerLeagueRepository.GetAllPlayerLeagues(userId);
+
+            if (leagues == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(leagues);
+        }
+ 
+
+
+    [Authorize]
         [HttpPost("join/{id}")]
         public async Task<IActionResult> Create([FromRoute] int id)
         {
