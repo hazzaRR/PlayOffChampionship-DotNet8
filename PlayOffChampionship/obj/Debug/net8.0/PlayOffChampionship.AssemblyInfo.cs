@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+963ae4036289bad2d3e81f96708c6c58981b4e7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9a2f006db46aca2916948ba20734f7222965605")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlayOffChampionship")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
