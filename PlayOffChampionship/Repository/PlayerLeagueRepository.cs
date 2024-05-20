@@ -33,6 +33,12 @@ namespace PlayOffChampionship.Repository
             .ToListAsync();
         }
 
+        public async Task<List<League>> GetAllLeaguesNotJoinedByPlayer(string userId)
+        {
+            return await _context.Leagues.FromSql(
+                $"SELECT * FROM league LEFT JOIN player_league ON league.\"Id\" = player_league.\"LeagueId\" AND player_league.\"PlayerId\" = {userId} WHERE player_league.\"PlayerId\" IS NULL").ToListAsync();
+        }
+
         public async Task<bool> JoinLeague(ApplicationUser player, League league)
         {
 

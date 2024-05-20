@@ -46,10 +46,33 @@ namespace PlayOffChampionship.Controllers
 
             return Ok(leagues);
         }
- 
 
 
-    [Authorize]
+        [Authorize]
+        [HttpGet("joinable")]
+        public async Task<IActionResult> GetLeaguesPlayerNotApartOf()
+
+        {
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return NotFound("No user is successfully logged in");
+            }
+
+            var leagues = await _playerLeagueRepository.GetAllLeaguesNotJoinedByPlayer(userId);
+
+            if (leagues == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(leagues);
+        }
+
+
+
+        [Authorize]
         [HttpPost("join/{id}")]
         public async Task<IActionResult> Create([FromRoute] int id)
         {

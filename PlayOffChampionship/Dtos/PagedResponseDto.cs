@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace PlayOffChampionship.Dtos
+﻿namespace PlayOffChampionship.Dtos
 {
     public class PagedResponseDto<T>
     {
